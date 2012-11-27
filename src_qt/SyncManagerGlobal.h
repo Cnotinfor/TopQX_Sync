@@ -1,0 +1,17 @@
+#ifndef SYNCMANAGERGLOBAL_H
+#define SYNCMANAGERGLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef SHARED_LIB
+
+#ifdef SYNC_MANAGER_LIB
+# define SYNC_MANAGER_EXPORT Q_DECL_EXPORT
+#else
+# define SYNC_MANAGER_EXPORT Q_DECL_IMPORT
+#endif
+#else
+#define SYNC_MANAGER_EXPORT
+#endif
+
+#endif // SYNCMANAGERGLOBAL_H
